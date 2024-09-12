@@ -24,18 +24,15 @@ main {
   @include boxSize(93%, 100%);
 
   display: grid;
-  grid-template-rows: repeat(50, 1fr);
-  grid-template-columns: repeat(50, 1fr);
+  place-content: center;
 
-  [class^="gadget"] {
+  #widget {
+    height: 300px;
+    width: 500px;
+    padding: 1em;
     background-color: $fundo-padrao;
     border-radius: 15px;
     box-shadow: $sombra;
-  }
-
-  .gadget-3 {
-    grid-area: 7/2 / 26/16;
-    padding: 1em;
 
     #topo {
       @include boxSize(10%, 100%);
